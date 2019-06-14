@@ -76,6 +76,7 @@ if (!empty($_POST["submit"])) {
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Submit" name="submit" id="submit">
     </form><br />
+    <?php echo $result . "<br/>"; ?>
     <table border="1">
         <tr>
             <th>No.</th>
