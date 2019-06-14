@@ -7,7 +7,7 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=" . getenv('ACCOUNT_NAME') . ";AccountKey=" . getenv('ACCOUNT_KEY');
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=macderakhastorage;AccountKey=/7l/2GlKoIEs4A9oB8Pl+YABq3zsPpMtCEGEclK/IzjnTiupqA+0u7BDkvJz+YsbFG6SqZJ/4cNDPnjTkr3+UQ==";
 
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 $containerName = "macderakhacontainer";
