@@ -113,6 +113,7 @@ if (!empty($_POST["submit"])) {
                     </td>
                     <td>
                         <img id="result" style="max-width: 400px;">
+                        <h3 id="captions"></h3>
                     </td>
                 </tr>
             </table>
@@ -145,9 +146,12 @@ if (!empty($_POST["submit"])) {
                 data: '{"url": ' + '"' + url + '"}',
             })
             .done(function(data) {
+                let caption = data.description.captions[0].text;
                 $('#responseTextArea').empty();
+                $('#captions').empty();
                 $("#responseTextArea").val(JSON.stringify(data, null, 2));
                 $('#result').attr("src", url);
+                $('#captions').append(caption)
                 $('#modal').show();
             })
             .fail(function(jqXHR, textStatus, errorThrown) {
